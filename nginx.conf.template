@@ -1,0 +1,11 @@
+events {
+  # configuration of connection processing
+}
+
+http{
+  server {
+    location / {
+      rewrite ^ $REDIRECT_URL/$request_uri? redirect;
+    }
+  }
+}
